@@ -3,21 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HireApp"
              x:Class="HireApp.MainPage">
-    <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="0" Padding="0" Margin="0" >
-        <StackLayout Spacing="0" Padding="3" Margin="15,15,15,0" Orientation="Horizontal" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0" Padding="0" Margin="0" >
+        <StackLayout Spacing="0" Padding="3" Margin="15,15,15,0" Orientation="Horizontal" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
             <Label Text="User Name:" TextColor="Black" FontSize="18" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             <Entry x:Name="txtUserName" Placeholder="enter user name here" PlaceholderColor="LightBlue" TextColor="Black" FontSize="18"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
         </StackLayout>
-        <StackLayout Spacing="0" Padding="3" Margin="15,0,15,0" Orientation="Horizontal" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+        <StackLayout Spacing="0" Padding="3" Margin="15,0,15,0" Orientation="Horizontal" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
             <Label Text="Password:" TextColor="Black" FontSize="18" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             <Entry x:Name="txtPassword" Placeholder="enter password here" PlaceholderColor="LightBlue" IsPassword="True" TextColor="Black" FontSize="18"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
         </StackLayout>
-        <Button x:Name="btnLogin" Text="Login" HorizontalOptions="CenterAndExpand" Clicked="BtnLogin_Clicked"/>
-        <Label x:Name="lblNewRegistration" Text="New registration" TextColor="OrangeRed" FontAttributes="Italic" HorizontalOptions="CenterAndExpand">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-            </Label.GestureRecognizers>
-        </Label>
-        
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button x:Name="btnLogin" Text="Login" HorizontalOptions="CenterAndExpand" Clicked="BtnLogin_Clicked"/>
+            <Label x:Name="lblNewRegistration" Text="New registration" TextColor="OrangeRed" FontAttributes="Italic" HorizontalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
