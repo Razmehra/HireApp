@@ -13,5 +13,20 @@ namespace HireApp
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnLogin_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "Login button clicked", "Ok");
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "New registration tapped.", "Ok");
+        }
     }
 }
