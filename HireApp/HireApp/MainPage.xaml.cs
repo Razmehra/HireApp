@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HireApp.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,19 @@ namespace HireApp
 
         }
 
-        private void BtnLogin_Clicked(object sender, EventArgs e)
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", "Login button clicked", "Ok");
+            // await DisplayAlert("Alert", "Login button clicked", "Ok");
+
+            //await Navigation.PushAsync(new NavigationPage(new HomePage()));
+            App.Current.MainPage = new NavigationPage(new HomePage());
+
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", "New registration tapped.", "Ok");
+            //DisplayAlert("Alert", "New registration tapped.", "Ok");
+            App.Current.MainPage = new NavigationPage(new RegistrationPage());
         }
     }
 }
