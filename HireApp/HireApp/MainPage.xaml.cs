@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Plugin.Media;
+
 
 namespace HireApp
 {
@@ -24,8 +26,9 @@ namespace HireApp
         {
             // await DisplayAlert("Alert", "Login button clicked", "Ok");
 
-            //await Navigation.PushAsync(new NavigationPage(new HomePage()));
-            App.Current.MainPage = new NavigationPage(new HomePage());
+            await Navigation.PushAsync(new NavigationPage(new HomePage()));
+            //await Navigation.PushModalAsync(new NavigationPage(new HomePage()));  //not showing Back button
+            //App.Current.MainPage = new NavigationPage(new HomePage());
 
         }
 
@@ -34,5 +37,7 @@ namespace HireApp
             //DisplayAlert("Alert", "New registration tapped.", "Ok");
             App.Current.MainPage = new NavigationPage(new RegistrationPage());
         }
+
+        
     }
 }
