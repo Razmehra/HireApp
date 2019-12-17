@@ -18,6 +18,8 @@ namespace HireApp.Views
             InitializeComponent();
             //CameraButton.Clicked += CameraButton_Clicked;
         }
+        //private string _imagepath { get; set; }
+        
 
         private async void CameraButton_Clicked(object sender, EventArgs e)
         {
@@ -34,9 +36,10 @@ namespace HireApp.Views
                 return;
 
             await DisplayAlert("File Location", photo.Path, "OK");
-
+            //_imagepath = photo.Path;
             if (photo != null)
                 Defaultimg.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+            
         }
 
         private async void Btnregistration_Clicked(object sender, EventArgs e)
@@ -48,7 +51,8 @@ namespace HireApp.Views
                 Mobile = txtmobileno.Text,
                 EmailID = txtemail.Text,
                 Dob = dtpickerdob.Date.ToString("MMM dd yyyy"),
-                Reffreence = txtrefference.Text
+                Reffreence = txtrefference.Text,
+                Img = Defaultimg.Source
             };
 
             var redirect = new HomePage();
@@ -65,5 +69,6 @@ namespace HireApp.Views
         public string EmailID { get; set; }
         public string Dob { get; set; }
         public string Reffreence { get; set; }
+        public ImageSource Img { get; set; }
     }
 }

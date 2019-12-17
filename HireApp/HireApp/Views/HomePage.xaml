@@ -3,45 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HireApp.Views.HomePage">
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal">
-            <StackLayout  Orientation="Vertical" HorizontalOptions="StartAndExpand">
-                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                    <Label x:Name="lblusername" Text="User Name : "  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                    <Entry x:Name="txtusername" Text="{Binding UserName}"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalOptions="Center" IsEnabled="False"></Entry>
+        <Frame BorderColor="BlueViolet">
+
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Wheat" VerticalOptions="StartAndExpand">
+                <StackLayout  Orientation="Vertical" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+
+                    <Label x:Name="_lblusername" FontAttributes="Bold,Italic" Text="User Name  : "  HorizontalOptions="StartAndExpand" ></Label>
+                    <Entry x:Name="txtusername" Text="{Binding UserName}"  HorizontalOptions="StartAndExpand"   IsEnabled="False"></Entry>
+
+                    <Label x:Name="_lbladdress" FontAttributes="Bold,Italic" Text="Address  : "  HorizontalOptions="StartAndExpand" ></Label>
+                    <Entry x:Name="_txtaddress"  Text="{Binding Address}"  HorizontalOptions="StartAndExpand" IsEnabled="False"></Entry>
+
+                    <Label x:Name="_lblmobile" FontAttributes="Bold,Italic" Text="Mobile No : " HorizontalOptions="StartAndExpand" ></Label>
+                    <Entry x:Name="_txtmobile" Text="{Binding Mobile}"  HorizontalOptions="StartAndExpand"  IsEnabled="False"></Entry>
+
+                    <Label x:Name="_lblemailid" FontAttributes="Bold,Italic" Text="Email ID : " HorizontalOptions="StartAndExpand"></Label>
+                    <Entry x:Name="_txtemailid" Text="{Binding EmailID}"  HorizontalOptions="StartAndExpand"  IsEnabled="False"></Entry>
+
+                    <Label x:Name="_lblreff" FontAttributes="Bold,Italic" Text="Refference : " HorizontalOptions="StartAndExpand" ></Label>
+                    <Entry x:Name="_txtrefference" Text="{Binding Reffreence}"  HorizontalOptions="StartAndExpand"  IsEnabled="False"></Entry>
+
+                    <Label x:Name="_lbldob" FontAttributes="Bold,Italic" Text="DOB : " HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                    <Entry x:Name="_txtdob" Text="{Binding Dob}"  HorizontalOptions="StartAndExpand"  IsEnabled="False"></Entry>
+
                 </StackLayout>
 
-
-                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                    <Label x:Name="_lbladdress" Text="Address  : "  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                    <Entry x:Name="_txtaddress" Text="{Binding Address}"  HorizontalOptions="StartAndExpand"  IsEnabled="False"></Entry>
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                    <Image x:Name="_Defaultimg" Source="{Binding Img}" HeightRequest="200" WidthRequest="120"/>
                 </StackLayout>
-
-                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                    <Label x:Name="_lblmobile" Text="Mobile No : " HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                    <Entry x:Name="_txtmobile" Text="{Binding Mobile}" IsEnabled="False"></Entry>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                    <Label x:Name="_lblemailid" Text="Email ID : " HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                    <Entry x:Name="_txtemailid" Text="{Binding EmailID}"  IsEnabled="False"></Entry>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                    <Label x:Name="_lblreff" Text="Refference : " HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                    <Entry x:Name="_txtrefference" Text="{Binding Reffreence}" IsEnabled="False"></Entry>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                    <Label x:Name="_lbldob" Text="DOB : " HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                    <Entry x:Name="_txtdob" Text="{Binding Dob}"  IsEnabled="False"></Entry>
-                </StackLayout>
-
             </StackLayout>
-
-            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" >
-                <Image x:Name="_Defaultimg" Source="Avtar.png" HeightRequest="130" WidthRequest="100"/>
-            </StackLayout>
-        </StackLayout>
-
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

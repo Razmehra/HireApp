@@ -1,63 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HireApp.Views.RegistrationPage" BackgroundColor="Wheat">
+             x:Class="HireApp.Views.RegistrationPage" BackgroundColor="Wheat" Title="Registration Form"  >
+    <!--NavigationPage.HasNavigationBar="False"-->
+    <NavigationPage.TitleView>
+        <StackLayout  VerticalOptions="FillAndExpand" Padding="0" Margin="0">
+            <Label Text="Registration Form" TextColor="FloralWhite" FontSize="25" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <Frame>
+        <StackLayout Orientation="Horizontal" Padding="0" Margin="0">
 
-    <StackLayout Orientation="Horizontal">
-        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" BackgroundColor="Wheat" Spacing="0" Padding="0" Margin="0" >
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" BackgroundColor="Wheat" Spacing="0" Padding="0" Margin="0" >
 
-            <StackLayout Spacing="0" Padding="3" Margin="0,15,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                <Label FontAttributes="Bold,Italic" Text="User Name :" TextColor="Black"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="txtusername" Placeholder="Pleae enter username" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-            </StackLayout>
+                <StackLayout Spacing="0" Padding="3" Margin="0,15,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold,Italic" Text="User Name :" TextColor="Black"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtusername" Placeholder="Pleae enter username" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
 
-            <StackLayout Spacing="0" Margin="-5,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                <Label FontAttributes="Bold,Italic" Text="Address :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="txtaddress" Placeholder="Please enter address" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-            </StackLayout>
-
-
-            <StackLayout Spacing="0" Margin="-7,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                <Label FontAttributes="Bold,Italic" Text="MoblieNo :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="txtmobileno" Placeholder="Please enter mobile" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-            </StackLayout>
-
-            <StackLayout Spacing="0" Margin="-10,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                <Label FontAttributes="Bold,Italic" Text="EmailID :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="txtemail" Placeholder="Please enter EmailID"  PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-            </StackLayout>
-
-            <StackLayout Spacing="0" Margin="15,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                <Label FontAttributes="Bold,Italic" Text="Refference :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="txtrefference" Placeholder="Please enter reffrence name" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" Margin="-40,0,0,0">
-                <Label FontAttributes="Bold,Italic" Text="DOB :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <DatePicker x:Name="dtpickerdob" MinimumDate="01/01/2010" MaximumDate="12/31/2018" Date="06/21/2018" HorizontalOptions="FillAndExpand" Margin="-50,0,0,0"/>
-
-            </StackLayout>
+                <StackLayout Spacing="0" Margin="-5,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold,Italic" Text="Address :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtaddress" Placeholder="Please enter address" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
 
 
-            <Button x:Name="btnregistration" Margin="0,50,0,0" Text="Register"  TextColor="Black"
+                <StackLayout Spacing="0" Margin="-7,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold,Italic" Text="MoblieNo :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtmobileno" Placeholder="Please enter mobile" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Spacing="0" Margin="-10,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold,Italic" Text="EmailID :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtemail" Placeholder="Please enter EmailID"  PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Spacing="0" Margin="15,0,15,0" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold,Italic" Text="Refference :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtrefference" Placeholder="Please enter reffrence name" PlaceholderColor="LightSkyBlue" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="-40,0,0,0">
+                    <Label FontAttributes="Bold,Italic" Text="DOB :" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <DatePicker x:Name="dtpickerdob" MinimumDate="01/01/2010" MaximumDate="12/31/2018" Date="06/21/2018" HorizontalOptions="FillAndExpand" Margin="-50,0,0,0"/>
+
+                </StackLayout>
+
+
+                <Button x:Name="btnregistration" Margin="0,50,0,0" Text="Register"  TextColor="Black"
                     FontAttributes="Bold,Italic"  CornerRadius="25" BorderColor="Silver" BorderWidth="2" 
                     BackgroundColor="white" HorizontalOptions="CenterAndExpand" Clicked="Btnregistration_Clicked"/>
 
-        </StackLayout>
-        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" >
-            <!-- use a custom Markup Extension -->
-            <Image x:Name="Defaultimg" Source="Avtar.png" HeightRequest="130" WidthRequest="100"/>
+            </StackLayout>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Image x:Name="PhotoImage" />
-                <Button x:Name="CameraButton" Clicked="CameraButton_Clicked" Text="Take Photo" Grid.Row="1" />
-            </Grid>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <Image x:Name="Defaultimg" Source="Avtar.png" HeightRequest="200" WidthRequest="120"/>
+                <Button x:Name="CameraButton" Clicked="CameraButton_Clicked" Text="Take Photo" />
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
-    
+        <!--</StackLayout>-->
+    </Frame>
 </ContentPage>

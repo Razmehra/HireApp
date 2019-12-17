@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HireApp"
              x:Class="HireApp.MainPage"  BackgroundColor="Wheat">
-
     <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="0" Padding="0" Margin="0" >
 
         <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Spacing="0" Padding="0" Margin="0" >
